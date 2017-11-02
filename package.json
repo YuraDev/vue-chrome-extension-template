@@ -2,7 +2,7 @@
   "name": "vue-chrome-extension-template",
   "version": "0.0.1",
   "description": "vue.js chrome extension template (wcer)",
-  "author": "developer.yura@gmail.com",
+  "author": "works.yura@gmail.com",
   "license": "MIT",
   "private": false,
   "dependencies": {
