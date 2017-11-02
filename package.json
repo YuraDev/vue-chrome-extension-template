@@ -1,7 +1,7 @@
 {
-  "name": "wcer",
-  "version": "1.0.0",
-  "description": "Webpack Chrome Extension Reloader",
+  "name": "vue-chrome-extension-template",
+  "version": "0.0.1",
+  "description": "vue.js chrome extension template (wcer)",
   "author": "developer.yura@gmail.com",
   "license": "MIT",
   "private": false,
