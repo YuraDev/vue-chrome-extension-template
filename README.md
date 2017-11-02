@@ -1,4 +1,4 @@
-# vue.js chrome extension template (wcer)
+# Vue.js Chrome Extension Template ([wcer](https://github.com/YuraDev/wcer))
 ```bash
 npm run dev
 //or

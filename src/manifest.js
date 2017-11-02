@@ -1,8 +1,8 @@
 
 module.exports = {
-  name: 'Chrome Extension',
+  name: 'Vue Extension',
   version: '1.0.0',
-  description: 'chrome extension',
+  description: 'Vue.js Chrome Extension Template (wcer)',
   author: 'yura',
   manifest_version: 2,
   icons: { '16': 'icons/16.png', '128': 'icons/128.png' },
