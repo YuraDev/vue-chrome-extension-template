@@ -46,7 +46,15 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           extractCSS: true,
-          loaders: cssLoaders(),
+          loaders: {
+            ...cssLoaders(),
+            js: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['es2015']
+              }
+            }
+          },
           transformToRequire: {
             video: 'src',
             source: 'src',
