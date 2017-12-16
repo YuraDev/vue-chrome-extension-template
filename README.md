@@ -7,26 +7,8 @@
   <br>
   <br>
 </div>
-<span>
-<img width="300" src="/docs/images/mini.jpg" alt="electron-vue">
-<br>
-text
-</span>
-<span>
-<img width="300" src="/docs/images/mini.jpg" alt="electron-vue">
-<br>
-text
-</span>
-<span>
-<img width="300" src="/docs/images/mini.jpg" alt="electron-vue">
-<br>
-text
-</span>
-<span>
-<img width="300" src="/docs/images/mini.jpg" alt="electron-vue">
-<br>
-text
-</span>
+
+![alt text](YuraDev/vue-chrome-extension-template/raw/master/docs/images/mini.jpg "Logo Title Text 1")
 
 ## Installation:
 This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. 
