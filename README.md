@@ -3,12 +3,13 @@
 
 <div align="center">
   <br>
-    <img width="800" src="/docs/images/mini.jpg" alt="electron-vue">
+    <img width="900" src="/docs/images/mini.jpg" alt="electron-vue">
   <br>
   <br>
 </div>
 
 ## Installation:
+> This boilerplate was built as a template for vue-cli and includes options to customize your final scaffolded app. 
 ``` bash
 # install vue-cli
 $ npm install -g vue-cli
