@@ -2,10 +2,10 @@
 > Template for quick creation of Chrome extension on Vuejs c hot reloading when developing.
 
 <div align="center">
-<br>
-<img width="500" src="/docs/images/mini.jpg" alt="electron-vue">
-<br>
-<br>
+  <br>
+    <img width="800" src="/docs/images/mini.jpg" alt="electron-vue">
+  <br>
+  <br>
 </div>
 ## Installation:
 ``` bash
