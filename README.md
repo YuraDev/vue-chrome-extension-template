@@ -1,14 +1,7 @@
 # Vue.js Chrome Extension Template ([wcer](https://github.com/YuraDev/wcer))
 > Template for quick creation of Chrome extension on Vuejs c hot reloading when developing.
 
-<div align="center">
-  <br>
-    <img width="900" src="/docs/images/mini.jpg" alt="electron-vue">
-  <br>
-  <br>
-</div>
-
-![alt text](/docs/images/mini.jpg "Logo Title Text 1")
+![Vue.js Chrome Extension Template images](/docs/images/mini.jpg)
 
 ## Installation:
 This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. 
