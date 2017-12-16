@@ -8,7 +8,7 @@
   <br>
 </div>
 
-![alt text](YuraDev/vue-chrome-extension-template/raw/master/docs/images/mini.jpg "Logo Title Text 1")
+![alt text](/docs/images/mini.jpg "Logo Title Text 1")
 
 ## Installation:
 This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. 
