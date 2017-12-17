@@ -16,5 +16,5 @@
       "label": "Author"
     }
   },
-  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev\n\n"
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install  # or yarn\n  npm run dev # or yarn dev\n\n"
 }
