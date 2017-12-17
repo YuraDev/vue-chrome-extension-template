@@ -15,3 +15,13 @@ $ cd my-project
 $ npm install # or yarn
 $ npm run dev # or yarn dev
 ```
+
+## Structure
+* [backend](https://developer.chrome.com/extensions/background_pages): Background work of your scripts
+* [content](https://developer.chrome.com/extensions/content_scripts) Run in the context of web pages 
+* [devtools](https://developer.chrome.com/extensions/devtools) - It can add new UI panels and sidebars, interact with the inspected page, get information about network requests, and more.
+* [options](https://developer.chrome.com/extensions/options) - To allow users to customize the behavior of your extension, you may wish to provide an options page.
+* popup - The page (window) that will be displayed when the icon is clicked
+* tab - Your application will work in a separate tab
+* ext - Shared scripts
+* [manifest.js](https://developer.chrome.com/extensions/manifest) - Descriptions of the application, its rights and possibilities
