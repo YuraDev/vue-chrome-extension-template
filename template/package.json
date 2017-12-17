@@ -17,8 +17,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
-    "dev": "nodemon --ignore ./build --ignore ./src --exec npm run watch",
-    "watch": "webpack --config ./core/webpack.dev.js --hide-modules",
+    "dev": "webpack --config ./core/webpack.dev.js --hide-modules",
     "build": "webpack --config ./core/webpack.prod.js -p --progress  --hide-modules --colors"
   },
   "devDependencies": {
