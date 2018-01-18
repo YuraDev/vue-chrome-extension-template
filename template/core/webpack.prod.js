@@ -6,13 +6,19 @@ const baseWebpack = require('./webpack.base')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const {styleLoaders} = require('./tools')
+const { styleLoaders, htmlPage } = require('./tools')
 module.exports = merge(baseWebpack, {
   devtool: '#cheap-module-eval-source-map',
   module: {
     rules: styleLoaders({ extract: true, sourceMap: true })
   },
   plugins: [
+    htmlPage('home', 'app', ['manifest', 'vendor', 'tab']),
+    htmlPage('popup', 'popup', ['manifest', 'vendor', 'popup']),
+    htmlPage('panel', 'panel', ['manifest', 'vendor', 'panel']),
+    htmlPage('devtools', 'devtools', ['manifest', 'vendor', 'devtools']),
+    htmlPage('options', 'options', ['manifest', 'vendor', 'options']),
+    htmlPage('background', 'background', ['manifest', 'vendor', 'background']),
     new CleanWebpackPlugin(['build/*.*']),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({

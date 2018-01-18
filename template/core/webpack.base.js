@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const ChromeReloadPlugin  = require('wcer')
-const {cssLoaders, htmlPage} = require('./tools')
+const { cssLoaders } = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 let resolve = dir => path.join(__dirname, '..', 'src', dir)
@@ -10,7 +10,7 @@ module.exports = {
     tab: resolve('./tab'),
     popup: resolve('./popup'),
     options: resolve('./options'),
-    content: resolve('./content'), 
+    content: resolve('./content'),
     devtools: resolve('./devtools'),
     background: resolve('./backend'),
     panel: resolve('./devtools/panel'),
@@ -90,12 +90,6 @@ module.exports = {
     ]
   },
   plugins: [
-    htmlPage('home', 'app', ['tab']),
-    htmlPage('popup', 'popup', ['popup']),
-    htmlPage('panel', 'panel', ['panel']),
-    htmlPage('devtools', 'devtools', ['devtools']),
-    htmlPage('options', 'options', ['options']),
-    htmlPage('background', 'background', ['background']),
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
     new ChromeReloadPlugin({
       port: 9090,
