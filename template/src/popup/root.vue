@@ -1,13 +1,17 @@
 <template lang="pug">
     div
-      el-button(type="primary" @click="tab") New tab 
+      el-button(type="primary" @click="tab") {{ __('popup') }}
 </template>
 <script>
+  const __ = chrome.i18n.getMessage // eslint-disable-line no-unused-vars
+
   export default {
     data: () => ({
     }),
     computed: { },
-    created () { },
+    created () {
+      console.log(__('popup'))
+    },
     mounted () { },
     methods: {
       tab () {

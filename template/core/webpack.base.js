@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const ChromeReloadPlugin  = require('wcer')
 const { cssLoaders, htmlPage } = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const GenerateLocaleJsonPlugin = require('../plugins/GenerateLocaleJsonPlugin')
 
 let resolve = dir => path.join(__dirname, '..', 'src', dir)
 module.exports = {
