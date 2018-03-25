@@ -31,7 +31,11 @@ module.exports = {
   devtools_page: 'pages/devtools.html',
   options_page: 'pages/options.html',
   content_scripts: [{
-    js: [ 'js/inject.js' ],
+    js: [
+      'js/manifest.js',
+      'js/vendor.js',
+      'js/content.js'
+    ],
     run_at: 'document_end',
     matches: ['<all_urls>'],
     all_frames: true
