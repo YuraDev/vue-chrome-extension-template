@@ -1,12 +1,16 @@
 <template lang="pug">
-    div devtools
+    div {{ __('devtools') }}
 </template>
 <script>
+  const __ = chrome.i18n.getMessage // eslint-disable-line no-unused-vars
+
   export default {
     data: () => ({
     }),
     computed: { },
-    created () { },
+    created () {
+      console.log(__('options'))
+    },
     mounted () { },
     methods: { }
   }

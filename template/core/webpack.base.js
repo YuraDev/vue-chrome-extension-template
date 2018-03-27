@@ -1,8 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
 const ChromeReloadPlugin  = require('wcer')
-const {cssLoaders, htmlPage} = require('./tools')
+const { cssLoaders, htmlPage } = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const GenerateLocaleJsonPlugin = require('../plugins/GenerateLocaleJsonPlugin')
 
 let resolve = dir => path.join(__dirname, '..', 'src', dir)
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
     tab: resolve('./tab'),
     popup: resolve('./popup'),
     options: resolve('./options'),
-    content: resolve('./content'), 
+    content: resolve('./content'),
     devtools: resolve('./devtools'),
     background: resolve('./backend'),
     panel: resolve('./devtools/panel'),
@@ -90,17 +91,36 @@ module.exports = {
     ]
   },
   plugins: [
-    htmlPage('home', 'app', ['tab']),
-    htmlPage('popup', 'popup', ['popup']),
-    htmlPage('panel', 'panel', ['panel']),
-    htmlPage('devtools', 'devtools', ['devtools']),
-    htmlPage('options', 'options', ['options']),
-    htmlPage('background', 'background', ['background']),
+    htmlPage('home', 'app', ['manifest', 'vendor', 'tab']),
+    htmlPage('popup', 'popup', ['manifest', 'vendor', 'popup']),
+    htmlPage('panel', 'panel', ['manifest', 'vendor', 'panel']),
+    htmlPage('devtools', 'devtools', ['manifest', 'vendor', 'devtools']),
+    htmlPage('options', 'options', ['manifest', 'vendor', 'options']),
+    htmlPage('background', 'background', ['manifest', 'vendor', 'background']),
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
     new ChromeReloadPlugin({
       port: 9090,
       manifest: path.join(__dirname, '..', 'src', 'manifest.js')
     }),
+    new GenerateLocaleJsonPlugin({
+      _locales: path.join(__dirname, '..', 'src', '_locales')
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module) {
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../node_modules')
+          ) === 0
+        )
+      }
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor']
+    })
   ],
   performance: { hints: false },
 }

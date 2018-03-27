@@ -1,1 +1,2 @@
-console.log('content-script!')
+const __ = chrome.i18n.getMessage
+console.log(__('content'))
