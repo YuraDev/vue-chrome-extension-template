@@ -91,11 +91,11 @@ module.exports = {
   },
   plugins: [
     htmlPage('home', 'app', ['tab']),
-    htmlPage('popup', 'popup', ['popup']),
+    htmlPage('popup', 'popup', ['manifest', 'vendor', 'popup']), 
     htmlPage('panel', 'panel', ['panel']),
     htmlPage('devtools', 'devtools', ['devtools']),
     htmlPage('options', 'options', ['options']),
-    htmlPage('background', 'background', ['background']),
+    htmlPage('background', 'background', ['manifest', 'vendor', 'background']),
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
     new ChromeReloadPlugin({
       port: 9090,
