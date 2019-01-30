@@ -25,3 +25,7 @@ $ npm run dev # or yarn dev
 * tab - Your application will work in a separate tab
 * ext - Shared scripts
 * [manifest.js](https://developer.chrome.com/extensions/manifest) - Descriptions of the application, its rights and possibilities
+
+## Usage
+
+To use, navigate to chrome://extensions/, make sure Developer mode is enabled, and use `Load unpacked` to load the `./build/` folder in your project.
