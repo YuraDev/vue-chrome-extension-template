@@ -25,3 +25,9 @@ $ npm run dev # or yarn dev
 * tab - Your application will work in a separate tab
 * ext - Shared scripts
 * [manifest.js](https://developer.chrome.com/extensions/manifest) - Descriptions of the application, its rights and possibilities
+
+## Node Version Supported
+
+* `nvm install` use a node version less than 9 specified in .nvmrc
+    * `nvm use` use version specified in .nvmrc
+* `npm rebuild node-sass` rebuild sass using 8, use before `npm run dev`

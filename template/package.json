@@ -5,6 +5,9 @@
   "author": "works.yura@gmail.com",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": ">=8.0.0 <9.0.0"
+  },
   "dependencies": {
     "axios": "^0.17.0",
     "element-ui": "^2.0.1",
