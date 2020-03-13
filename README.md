@@ -7,7 +7,7 @@
 This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. 
 ``` bash
 # install vue-cli
-$ npm install -g vue-cli
+$ npm install -g @vue/cli
 # create a new project using the template
 $ vue init YuraDev/vue-chrome-extension-template my-project
 # install dependencies and go!
